@@ -1,0 +1,36 @@
+.mask {
+	position: relative;
+	top: 10vh;
+	left: 14vw;
+	float: left;
+	z-index: 99;
+}
+
+.maskImg {
+	position: relative;
+	border-radius: 20px; 
+	width: 35vw; 
+	height: 106vh;
+	transition: transform 0.3s ease;
+	z-index: 99;
+}
+
+.maskImg:hover {
+	transform: scale(1.1);
+}
+
+.gear {
+	position: relative;
+	top: 10vh;
+	float: right;
+	right: 14vw;
+	z-index: 0;
+}
+
+.accessories {
+	position: relative;
+	float: left;
+	top: 14vh;
+	left: 14vw;
+	z-index: 0;
+}
