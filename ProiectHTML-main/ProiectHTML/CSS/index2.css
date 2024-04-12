@@ -1,36 +1,270 @@
+.video {
+	display: block;
+	z-index: 10;
+	position: relative;
+}
+
+#writing {
+	position: fixed;
+	z-index: 20;
+	font-family: Porsche;
+	font-size: 230%;
+	color: white;
+	top: 84.5vh;
+	left: 45vw;
+}
+
+#writing.stop {position: absolute; top: 96vh;}
+
+#writing.go {position: fixed;}
+
+#scris {
+	transform: scale(1, 0.85);
+	pointer-events: none;
+	opacity: 0;
+}
+
+#scris.color {
+	background-color: rgba(255,255,255, 0);
+	animation-name: appear;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
+#scris.decolor {
+	background-color: rgba(255,255,255, 0);
+	animation-name: disappear;
+	animation-duration: 0.1s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
+#buton2 {
+	opacity: 1;
+	z-index: 20;
+	position: fixed;
+	height: 40px;
+	width: 202px;
+	top: 91vh;
+	left: 44.6vw;
+}
+
+#buton.color {
+	animation-name: appear;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
+#buton.decolor {
+	animation-name: disappear;
+	animation-duration: 0.1s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both;
+} 	
+
+#buton {
+	background-color: white;
+	height: 40px;
+	width: 202px;
+	position: absolute;
+	z-index: 20;
+	font-family: Porsche;
+	font-size: 100%;
+	color: white;
+	display: flex; align-items: center;
+	opacity: 0;
+}
+
+#buton2.go {position: fixed;}
+
+#buton2.stop {position: absolute; top: 102.5vh;}
+
+#butonAnc {
+	text-decoration: none;
+	transform: scale(1, 0.70);
+	display: block; margin: 0 auto;
+	color: black;
+	letter-spacing: 0.5px;
+	display: flex; align-items: center;
+}
+
 .mask {
 	position: relative;
-	top: 10vh;
-	left: 14vw;
+	top: 10vh;				
+	left: 19vw;
 	float: left;
-	z-index: 99;
-}
-
-.maskImg {
-	position: relative;
+	z-index: 10;
+	overflow: hidden;
 	border-radius: 20px; 
-	width: 35vw; 
-	height: 106vh;
-	transition: transform 0.3s ease;
-	z-index: 99;
+	height: 85vh;
+	width: 30vw;
 }
 
-.maskImg:hover {
+.mask > img {
+	position: relative;
+	width: 30vw; 
+	height: 85vh;
+	transition: transform 0.3s ease;
+	z-index: 10;
+}
+
+.mask > img:hover {
 	transform: scale(1.1);
+
 }
 
 .gear {
 	position: relative;
 	top: 10vh;
 	float: right;
-	right: 14vw;
+	right: 19vw;
 	z-index: 0;
+	overflow: hidden;
+	border-radius: 20px; 
+	height: 85vh;
+}
+
+.gear > img {
+	transition: transform 0.3s ease;
+	z-index: 10;
+}
+
+.gear >img:hover {
+	transform: scale(1.1);
 }
 
 .accessories {
 	position: relative;
 	float: left;
 	top: 14vh;
-	left: 14vw;
+	left: 19vw;
 	z-index: 0;
+	border-radius: 20px; 
+	overflow: hidden;
+	height: 55vh;
+}
+
+.accessories > img {
+	transition: transform 0.3s ease;
+	z-index: 10;
+}
+
+.accessories >img:hover {
+	transform: scale(1.1);
+}
+
+#headgear {
+	font-family: Aggressive;
+	letter-spacing: 8px;
+	font-size: 300%;
+	z-index: 10;
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	color: white;
+	transform: scaleY(0);
+	pointer-events: none;
+	writing-mode: vertical-rl;
+	transform-origin: top;
+}
+
+#headgear.hovered {
+	animation: grow 0.3s  forwards;
+}
+
+#headgear.unhovered {
+	animation: degrow 0.3s  forwards;
+}
+
+#gear {
+	font-family: Aggressive;
+	letter-spacing: 8px;
+	font-size: 300%;
+	z-index: 10;
+	position: absolute;
+	top: 70px;
+	left: 20px;
+	color: white;
+	transform: scaleY(0);
+	pointer-events: none;
+	writing-mode: vertical-rl;
+	transform-origin: top;
+}
+
+#gear.hovered {
+	animation: grow 0.3s  forwards;
+}
+
+#gear.unhovered {
+	animation: degrow 0.3s  forwards;
+}
+
+#attachments {
+	font-family: Aggressive;
+	letter-spacing: 8px;
+	font-size: 300%;
+	z-index: 10;
+	position: absolute;
+	top: 20px;
+	left: 220px;
+	color: white;
+	transform: scaleY(0);
+	pointer-events: none;
+	transform-origin: top;
+}
+
+#attachments.hovered {
+	animation: grow 0.3s  forwards;
+}
+
+#attachments.unhovered {
+	animation: degrow 0.3s  forwards;
+}
+
+
+@keyframes grow {
+	from{transform: scaleY(0);}
+	to{transform: scaleY(1);}
+}
+
+@keyframes degrow {
+	from{transform: scaleY(1);}
+	to{transform: scaleY(0);}
+}
+
+@keyframes appear {
+	from {opacity: 0; z-index: 0;}
+	
+	to {opacity:1; z-index: 1001;}
+}
+
+@keyframes disappear {
+	from {opacity: 1; z-index: 1001;}
+	
+	to {opacity:0; 
+	z-index: 0;}
+}
+
+@font-face {
+	font-family: Aggressive;
+	src: url(../Surse/Fonts/Fierce.ttf);
+}
+
+@font-face {
+	font-family: Porsche;
+	src: url(../Surse/Fonts/Porsche.ttf);
 }

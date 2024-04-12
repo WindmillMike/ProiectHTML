@@ -24,25 +24,36 @@
 		</div>
 	</div>
 	</div>
-	
+	</header>
 	<div id = "transparent"> </div>
 	<div id = "CloseButton" onclick = "unToggleMenu()"><img src="../Surse/Icons/cross.svg" alt="SVG Image" class = "cross"> </div>
 	<div id = "open_menu">
 			<div id = "open-menu1"> </div>
 			<div id = "open-menu2"> </div>
 	</div>
-
-	</header>
-  <script src="../JAVASCRIPT/index.js"></script>
-  <video autoplay muted loop src = "../Surse/GIF/military.mp4" width = "100%" height = "100%"></video>
+  <video autoplay muted loop src = "../Surse/GIF/military.mp4" width = "100%" height = "100%" class = "video"></video>
+  
+  <div id = "writing">
+	<p id = "scris">Gear for Men</p>
+  </div>
+  
+  <div id = "buton2"><div id = "buton"><a href = "" id = "butonAnc"><b>EXPLORE THE ROSTER</b></a></div></div>
+  
   <div class = "mask">
-	<img src = "..\Surse\Images\mask.jpg" class = "maskImg">
+	<img src = "..\Surse\Images\mask.jpg" onmouseover="addHoverClass(this)" onmouseout="removeHoverClass(this)">
+	<p id = "headgear">HELMETS</p>
   </div>
   <div class = "gear">
-	<img src = "..\Surse\Images\gear.jpg" style = "border-radius: 20px; width: 35vw; height: 106vh;">
+	<img src = "..\Surse\Images\gear.jpg" style = "border-radius: 20px; width: 30vw; height: 85vh;" onmouseover="addHover(this)" onmouseout="removeHover(this)">
+	<p id = "gear">GEAR</p>
   </div>
   <div class = "accessories">
-	<img src = "..\Surse\Images\accessories.webp" style = "border-radius: 20px; width: 72vw; height: 70vh;">
+	<img src = "..\Surse\Images\accessories.webp" style = "border-radius: 20px; width: 62vw; height: 55vh;" onmouseover="add(this)" onmouseout="remove(this)">
+	<p id = "attachments">WEAPON ATTACHMENTS</p>
   </div>
+  
+  <script src="../JAVASCRIPT/index.js"></script>
+  <script src="../JAVASCRIPT/index2.js"></script>
+  
 </body>
 </html>

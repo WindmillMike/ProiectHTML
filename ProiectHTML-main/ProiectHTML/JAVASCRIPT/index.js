@@ -6,6 +6,7 @@ window.addEventListener('scroll', function() {
     var Logo1 = document.getElementById('Logo1');
 	var Menu = document.getElementById('menu');
 	var open_menu = document.getElementById('open_menu');
+	var Scris = document.getElementById('scris')
 
     if (window.scrollY > 1) {
 	  Logo1.classList.add('center'); 
@@ -14,6 +15,12 @@ window.addEventListener('scroll', function() {
 	  Menu.classList.remove('disappear');
 	  Top.classList.add('opened'); 
 	  Top.classList.remove('unopened');
+	  Logo.classList.remove('decolor');
+	  Logo.classList.remove('opened');
+	  Logo.classList.remove('unopened');
+	  Logo.classList.add('color'); 
+	  Scris.classList.remove('decolor');
+	  Scris.classList.add('color'); 
     } else {
 	  Logo1.classList.remove('center'); // Remove classes when not scrolling
       Logo1.classList.add('decenter'); 
@@ -22,6 +29,12 @@ window.addEventListener('scroll', function() {
 	  Menu.classList.remove('appeared');
 	  Top.classList.remove('opened');
 	  Top.classList.add('unopened');
+	  Logo.classList.remove('color');
+	  Logo.classList.remove('opened');
+	  Logo.classList.remove('unopened');
+	  Logo.classList.add('decolor'); 
+	  Scris.classList.remove('color');
+	  Scris.classList.add('decolor'); 
     } // 1000 milliseconds = 1 second
  
 });
@@ -41,6 +54,8 @@ function toggleMenu() {
 		lista.classList.add('opened');
 		open_menu1.classList.remove('unopened');
 		open_menu1.classList.add('opened');
+		open_menu.classList.remove('take');
+		open_menu.classList.add('add');
 		open_menu2.classList.remove('unopened');
 		open_menu2.classList.add('opened');
 		CloseButton.classList.remove('unopened');
@@ -61,6 +76,8 @@ function unToggleMenu() {
 		lista.classList.add('unopened');
 		open_menu1.classList.remove('opened');
 		open_menu1.classList.add('unopened');
+		open_menu.classList.remove('add');
+		open_menu.classList.add('take');
 		open_menu2.classList.remove('opened');
 		open_menu2.classList.add('unopened');
 		CloseButton.classList.remove('opened');

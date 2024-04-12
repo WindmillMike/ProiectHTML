@@ -40,7 +40,7 @@ body::-webkit-scrollbar {
 	vertical-align: top;
 	justify-content: right;
 	align-items: right;
-	right: 3vw;
+	right: 8vw;
 	opacity: 1;
 }
 
@@ -60,7 +60,6 @@ body::-webkit-scrollbar {
 	background-color: rgba(255,255,255,0);
 	position: relative;
 	text-decoration: none;
-	color: black;
 	z-index: 10;
 }
 
@@ -115,6 +114,7 @@ body::-webkit-scrollbar {
 .user {
 	background-color: rgba(255,255,255, 0);
 	transform: scale(0.6);
+	fill: #f3f7f9;
 }
 
 #lista.unopened {
@@ -142,10 +142,11 @@ body::-webkit-scrollbar {
 #menu {
 	position: relative;
 	background-color: rgba(255,255,255, 0);
-	width: 9vw;
-	height: 20vh;
+	width: 2vw;
+	height: 2vh;
 	top:25px;
-	padding-left:7vw;
+	float: left;
+	left:12vw;
 	z-index: 0;
 	opacity:0;
 }
@@ -153,7 +154,7 @@ body::-webkit-scrollbar {
 #menu.appear {
 	background-color: rgba(255,255,255, 0);
 	animation-name: appear;
-	animation-duration: 0.7s;
+	animation-duration: 0.5s;
 	animation-timing-function: ease-in;
 	animation-delay: 0s;
 	animation-iteration-count: 1;
@@ -164,7 +165,7 @@ body::-webkit-scrollbar {
 #menu.disappear {
 	background-color: rgba(255,255,255, 0);
 	animation-name: disappear;
-	animation-duration: 0.4s;
+	animation-duration: 0.1s;
 	animation-timing-function: ease-in;
 	animation-delay: 0s;
 	animation-iteration-count: 1;
@@ -195,35 +196,44 @@ body::-webkit-scrollbar {
 }
 
 #open_menu {
-	position: relative;
-	top: -15.5vh;
+	position: fixed;
 	width: 47.2vw;
 	height: 100vh;
 	float: left;
-	z-index: 0;
+	transition: z-index 0.5s ease;
 }
 
 #open-menu1 {
-	position: relative;
+	position: fixed;
 	width: 23.7vw;
 	top: -15.5vh;
 	height: 120vh;
 	float: left;
-	z-index: 0;
+	z-index: 0 ;
 	background-color:white;
 	opacity: 0;
 }
 
 #open-menu2 {
-	position: relative;
+	position: fixed;
 	width: 23.5vw;
 	top: -15.5vh;
 	height: 120vh;
 	float: left;
+	left: 23.7vw;
 	z-index: 0;
 	background-color:#eeeff2;
 	opacity: 0;
 }
+
+.take {
+	z-index: 0;
+}
+
+.add {
+	z-index: 90;
+}
+
 
 #open-menu1.unopened {
 	animation-name: disappear;
@@ -266,14 +276,14 @@ body::-webkit-scrollbar {
 }
 
 #CloseButton {
-	position: relative;
+	position: fixed;
 	left: 48.4vw;
 	width: 3.2rem;
 	height: 3.2rem;
-	top: -6vh;
+	top: 30px;
 	opacity: 0; /* Semi-transparent white background */
     backdrop-filter: blur(10px); /* Apply blur effect */
-	z-index: -1;
+	z-index: 0;
 	border: 3px solid #000;
 }
 
@@ -299,7 +309,7 @@ body::-webkit-scrollbar {
 
 
 .cross {
-	position: absolute;
+	position: fixed;
 	display: block;
 	top: 50%; /* Position from top */
     left: 50%; /* Position from left */
@@ -310,10 +320,10 @@ body::-webkit-scrollbar {
 }
 
 #transparent {
-	position: absolute;
-	top: 0vh;
-	width: 100vw;
+	position: fixed;
+	width: 52.8vw;
 	height: 100vh;
+	left: 47.2vw;
 	float: left;
 	z-index: 0;
 	opacity: 0; /* Semi-transparent white background */
@@ -351,7 +361,7 @@ body::-webkit-scrollbar {
 	height: 25vh;
 	position: absolute;
 	top: 25px;
-	left: 5vw;
+	left: 11vw;
 }
 
 
@@ -363,10 +373,10 @@ body::-webkit-scrollbar {
 
 #Logo {
 	background-color: rgba(255,255,255, 0);
-	font-family: Gucci;
+	font-family: Neuro;
 	position:relative;
 	height: 25vh;
-	font-size: 22vw;
+	font-size: 14vw;
 	text-align:center;
 	letter-spacing: 4vw;
 	caret-color: white;
@@ -375,8 +385,8 @@ body::-webkit-scrollbar {
 #Logo1.center {
 	background-color: rgba(255,255,255, 0);
 	animation-name: slideMidTop;
-	animation-duration: 0.3s;
-	animation-timing-function: ease-in;
+	animation-duration: 0.4s;
+	animation-timing-function: ease-in-out;
 	animation-delay: 0s;
 	animation-iteration-count: 1;
 	animation-direction: normal;
@@ -386,8 +396,8 @@ body::-webkit-scrollbar {
 #Logo1.decenter {
 	background-color: rgba(255,255,255, 0);
 	animation-name: slideTopMid;
-	animation-duration: 0.2s;
-	animation-timing-function: ease-in;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in-out;
 	animation-delay: 0s;
 	animation-iteration-count: 1;
 	animation-direction: normal;
@@ -416,21 +426,48 @@ body::-webkit-scrollbar {
 	animation-fill-mode: both;
 }
 
+#Logo.color {
+	background-color: rgba(255,255,255, 0);
+	animation-name: color;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
+#Logo.decolor {
+	background-color: rgba(255,255,255, 0);
+	animation-name: decolor;
+	animation-duration: 0.3s;
+	animation-timing-function: ease-in;
+	animation-delay: 0s;
+	animation-iteration-count: 1;
+	animation-direction: normal;
+	animation-fill-mode: both;
+}
+
 @font-face {
 	font-family: Gucci;
-	src: url(../Surse/Gucci-Font/Grajon.otf);
+	src: url(../Surse/Fonts/Granjon.otf);
+}
+
+@font-face {
+	font-family: Neuro;
+	src: url(../Surse/Fonts/Neuro.otf);
 }
 
 @keyframes slideMidTop {
 	from {transform: translateY(0px);}
 	
 	to {
-		transform: translateY(-47%) scale(0.12) ;
+		transform: translateY(-44%) scale(0.12);
 	}
 }
 
 @keyframes slideTopMid {
-	from {transform: translateY(-47%) scale(0.12) ;}
+	from {transform: translateY(-44%) scale(0.12);}
 	
 	to {
 		transform: translateY(0px) scale(1);
@@ -453,7 +490,7 @@ body::-webkit-scrollbar {
 @keyframes nontransparent {
 	from {backdrop-filter: blur(10px);
 		opacity: 0.8;
-		z-index: 1000;}
+		z-index: 100;}
 	
 	to {backdrop-filter: none;
 		opacity: 0;
@@ -468,7 +505,7 @@ body::-webkit-scrollbar {
 	
 	to {backdrop-filter: blur(10px);
 		opacity: 0.8;
-		z-index: 1000;}
+		z-index: 100;}
 }
 
 @keyframes white {
@@ -493,4 +530,16 @@ body::-webkit-scrollbar {
 	from {top: -10vh;}
 	
 	to {top: 0;}
+}
+
+@keyframes color {
+	from {color: black;}
+	
+	to {color: black;}
+}
+
+@keyframes decolor {
+	from {color: black;}
+	
+	to {color: black;}
 }
