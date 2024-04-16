@@ -38,7 +38,7 @@
   </div>
   
   <div id = "buton2"><div id = "buton"><a href = "" id = "butonAnc"><b>EXPLORE THE ROSTER</b></a></div></div>
-  
+  <div class = "equipment">
   <div class = "mask">
 	<img src = "..\Surse\Images\mask.jpg" onmouseover="addHoverClass(this)" onmouseout="removeHoverClass(this)">
 	<p id = "headgear">HELMETS</p>
@@ -51,7 +51,98 @@
 	<img src = "..\Surse\Images\accessories.webp" style = "border-radius: 20px; width: 62vw; height: 55vh;" onmouseover="add(this)" onmouseout="remove(this)">
 	<p id = "attachments">WEAPON ATTACHMENTS</p>
   </div>
+  </div>
   
+  <div class = "Featuring">
+  <p id = "Feat"><b>Featuring</b></p>
+  <a href =""><img src = "..\Surse\Images\ghost.png" id = "ghost"></a>
+  <div id = "FeatWriting">
+	<p style = "text-align: center; font-size: 400%; transform: scaleY(0.9);">Simon "Ghost" Riley</p>
+	<p style = "text-align: center; font-size: 100%; padding-top: 3vh; padding-bottom: 4vh;">INSPIRED BY LEGENDS</p>
+	<div style = "display: flex;
+  justify-content: center;
+  align-items: center;">
+	<div class = "Discover">
+		<a href = "" id = "DiscMore" onmouseover="Hovered(this)" onmouseout="removeHovered(this)"><b>Discover More</b>
+		<img src="../Surse/Icons/plus.svg" alt="SVG Image" id = "plus" style = "left: -0.3vw; position: relative; float: left; height:1.8vh; width: 0.8vw;">
+		</a>
+	</div>
+	</div>
+  </div>
+  </div>
+  
+  <div class = "Location">
+	<div class = "City">
+		<div class = "textCity">
+			<h1>Find a physical store near you.</h1>
+			<p style = "letter-spacing: 1px; padding-top: 3vh; font-size: 60%; font-family: Porsche; line-height: 1.4;">Making it easy to find your dream equipment. Enter your location and browse the best offers available near you.</p>
+			<div class = "searchBar">
+				<p style = "letter-spacing: 1px; font-size: 60%; font-family: Porsche;">Enter a location for your search</p>
+				<input type = "text" id = "input" placeholder = "Enter City or ZIP code" autocomplete = "off">
+				<button class = "butonSearch"><img src="../Surse/Icons/search.svg" alt="SVG Image" class = "user"></button>
+			</div>
+		</div>
+	</div>
+  </div>
+  
+  <footer>
+	<div class = "language">
+		<h2 style = "font-size: 150%; font-family: Porsche; color: white; font: 600 clamp(1.13rem, 1.08rem + 0.21vw, 1.33rem) / calc(2.125ex + 6px)"><b>Current Region / Language</b></h2>
+		<img src="../Surse/Icons/flag.svg" alt="SVG Image" style = "top: 1.3vh;position: relative;float: left;height: 3vh; width: 1.6vw; border-radius: 100vw;">
+		<p style = "float: left;top: 1.5vh;left: 1vw;position: relative;font-size: 120%; font-family: Porsche; color: white;">United States / English<a href = "" class = "change">Change</a></p>
+	</div>
+	<div class = "trio">
+		<div class = "newsletter">
+			<h2 style = "font-size: 150%; font-family: Porsche; color: white; font: 600 clamp(1.13rem, 1.08rem + 0.21vw, 1.33rem) / calc(2.125ex + 6px)"><b>Newsletter</b></h2>
+			<p style = "top: 10px;float: left;position: relative;font-size: 115%; font-family: Porsche; color: white;">Latest news directly in your inbox</p>
+			<button style = "bottom: 0;left: 0;cursor: pointer;position: absolute; float: left; border-radius: 7px; width: 17vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;">Subscribe</button>
+		</div>
+		<div class = "contact">
+			<h2 style = "font-size: 150%; font-family: Porsche; color: white; font: 600 clamp(1.13rem, 1.08rem + 0.21vw, 1.33rem) / calc(2.125ex + 6px)"><b>Contact</b></h2>
+			<p style = "top: 10px;float: left;position: relative;font-size: 115%; font-family: Porsche; color: white;">Do you have any questions?</p>
+			<button style = "bottom: 0;left: 0;cursor: pointer;position: absolute; float: left; border-radius: 7px; width: 17vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;">Contact Us</button>
+		</div>
+		<div class = "socialMedia">
+			<h2 style = "font-size: 150%; font-family: Porsche; color: white; font: 600 clamp(1.13rem, 1.08rem + 0.21vw, 1.33rem) / calc(2.125ex + 6px)"><b>Social Media</b></h2>
+			<p style = "top: 10px;float: left;position: relative;font-size: 115%; font-family: Porsche; color: white;">Get in touch with us via social media.</p>
+			<div style = "position: absolute; float: left;width: 40vw; bottom: 0; height: 6vh;">
+				<button style = "bottom: 0;left: 0;cursor: pointer;position: relative; float: left; border-radius: 7px; width: 3.2vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;"><img src="../Surse/Icons/facebook.svg" alt="SVG Image" style = "width: 1.3vw;"></button>
+				<button style = "bottom: 0;left: 0;cursor: pointer;position: relative; float: left; left: 0.5vw; border-radius: 7px; width: 3.2vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;"><img src="../Surse/Icons/instagram.svg" alt="SVG Image" style = "width: 1.3vw;"></button>
+				<button style = "bottom: 0;left: 0;cursor: pointer;position: relative; float: left; left: 1vw; border-radius: 7px; width: 3.2vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;"><img src="../Surse/Icons/pinterest.svg" alt="SVG Image" style = "width: 1vw;"></button>
+				<button style = "bottom: 0;left: 0;cursor: pointer;position: relative; float: left; left: 1.5vw; border-radius: 7px; width: 3.2vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;"><img src="../Surse/Icons/youtube.svg" alt="SVG Image" style = "width: 1.3vw;"></button>
+				<button style = "bottom: 0;left: 0;cursor: pointer;position: relative; float: left; left: 2vw; border-radius: 7px; width: 3.2vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;"><img src="../Surse/Icons/twitter.svg" alt="SVG Image" style = "width: 1.3vw;"></button>
+				<button style = "bottom: 0;left: 0;cursor: pointer;position: relative; float: left; left: 2.5vw; border-radius: 7px; width: 3.2vw; height: 6vh; font-size: 106%; transition: all 0.15s ease-in;"></button>
+			</div>
+		</div>
+	</div>
+	<div class = "company">
+		<h2 style = "positionfont-size: 150%; font-family: Porsche; color: white; font: 600 clamp(1.13rem, 1.08rem + 0.21vw, 1.33rem) / calc(2.125ex + 6px)"><b>Company</b></h2>
+		<div class = "first">
+			<ul style = "list-style: none; top: 15px;float: left;position: relative;font-size: 105%; font-family: Porsche; color: white;">
+				<li style = "padding-top: 6x;"><a href = "" class = "butone">First Glance</a></li>
+				<li style = "padding-top: 6px;"><a href = "" class = "butone">Careers</a></li>
+				<li style = "padding-top: 6px;"><a href = "" class = "butone">Press</a></li>
+			</ul>
+		</div>
+		<div class = "second">
+			<ul style = "list-style: none; top: 15px;float: left;position: relative;font-size: 105%; font-family: Porsche; color: white;">
+				<li style = "padding-top: 6x;"><a href = "" class = "butone">First Glance</a></li>
+				<li style = "padding-top: 6px;"><a href = "" class = "butone">Partner Forum</a></li>
+				<li style = "padding-top: 6px;"><a href = "" class = "butone">Contact</a></li>
+			</ul>
+		</div>
+		<div class = "third">
+			<ul style = "list-style: none; top: 15px;float: left;position: relative;font-size: 105%; font-family: Porsche; color: white;">
+				<li style = "padding-top: 6x;"><a href = "" class = "butone">Sustainability</a></li>
+				<li style = "padding-top: 6px;"><a href = "" class = "butone">Affiliates</a></li>
+			</ul>
+		</div>
+		<hr class="horizontal-line">
+	</div>
+	<div class = "logoFooter">
+		<a href = "" id = "logoFoot">BOTEA</a>
+	</div>
+  </footer>
   <script src="../JAVASCRIPT/index.js"></script>
   <script src="../JAVASCRIPT/index2.js"></script>
   

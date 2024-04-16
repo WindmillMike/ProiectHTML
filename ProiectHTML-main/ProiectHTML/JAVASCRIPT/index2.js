@@ -24,7 +24,7 @@ function remove() {Attachments.classList.remove('hovered');Attachments.classList
 window.addEventListener('scroll', function() {
   clearTimeout(debounceTimer)
 
-if (window.scrollY > 105) {
+if (window.scrollY > 110) {
 	Writing.classList.remove('go');
 	Writing.classList.add('stop');
 	Buton.classList.remove('go');
@@ -48,5 +48,22 @@ if (window.scrollY > 1) {
 else {
 	Buton2.classList.remove('color');
 	Buton2.classList.add('decolor');
+	Buton.classList.remove('go');
+	Buton.classList.remove('stop');
 }
 });
+
+var Plus = document.getElementById('plus')
+
+
+
+function Hovered() {
+ Plus.classList.remove('unrotate');
+ Plus.classList.add('rotate');
+}
+
+function removeHovered() {
+  Plus.classList.remove('rotate');
+  Plus.classList.add('unrotate');
+}
+

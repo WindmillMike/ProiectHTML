@@ -362,6 +362,7 @@ body::-webkit-scrollbar {
 	position: absolute;
 	top: 25px;
 	left: 11vw;
+	text-align:center;
 }
 
 
@@ -459,18 +460,18 @@ body::-webkit-scrollbar {
 }
 
 @keyframes slideMidTop {
-	from {transform: translateY(0px);}
+	from {transform: translate(0px, 0px);}
 	
 	to {
-		transform: translateY(-44%) scale(0.12);
+		transform: translate(-1.8%, -44%) scale(0.12);
 	}
 }
 
 @keyframes slideTopMid {
-	from {transform: translateY(-44%) scale(0.12);}
+	from {transform: translate(-1.8%, -44%) scale(0.12);}
 	
 	to {
-		transform: translateY(0px) scale(1);
+		transform: translate(0px, 0px) scale(1);
 	}
 }
 
